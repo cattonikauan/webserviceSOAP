@@ -1,0 +1,30 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\FastInfoset.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\gmbal-api-only.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\ha-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\istack-commons-runtime.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\javax.activation.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\javax.activation-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\javax.annotation-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\javax.jws-3.1.2.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\javax.xml.soap-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxb-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxb-jxc.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxb-runtime.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxb-xjc.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxws-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxws-rt.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\jaxws-tools.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\management-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\mimepull.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\policy.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\saaj-impl.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\stax2-api.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\stax-ex.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\streambuffer.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\txw2.jar",
+        "c:\\Users\\catto\\Downloads\\libs\\woodstox-core.jar"
+    ]
+}
