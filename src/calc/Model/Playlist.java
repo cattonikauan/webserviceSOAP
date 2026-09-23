@@ -1,13 +1,19 @@
 package calc.Model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
 import java.util.List;
 
+// FIELD: o JAXB converte o objeto para XML (e de volta) usando os atributos
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Playlist {
 
     private int id;
     private String nomePlaylist;
     // Lista de musicas que a playlist contém
+    @XmlElement(name = "musica")
     private List<Musica> musicas = new ArrayList<>();
 
     public Playlist() {
@@ -25,7 +31,7 @@ public class Playlist {
     public void setId(int id) {
         // Verifica se o id é menor ou igual a 0, se for...
         if (id <= 0) {
-            throw new IllegalArgumentException("O ID deve ser maior que zero.");
+            throw new IllegalArgumentException("O ID da playlist deve ser maior que zero.");
         }
 
         this.id = id;
@@ -42,8 +48,14 @@ public class Playlist {
                     "O nome da playlist não pode estar em branco."
             );
         }
+        // Limite de tamanho para o nome
+        if (nomePlaylist.trim().length() > 50) {
+            throw new IllegalArgumentException(
+                    "O nome da playlist deve ter no máximo 50 caracteres."
+            );
+        }
 
-        this.nomePlaylist = nomePlaylist;
+        this.nomePlaylist = nomePlaylist.trim();
     }
 
     public List<Musica> getMusicas() {
@@ -55,10 +67,14 @@ public class Playlist {
         if (musica == null) {
             throw new IllegalArgumentException("A música não pode ser nula.");
         }
-
-        if (!musicas.contains(musica)) {
-            musicas.add(musica);
+        // Verifica se a música já está na playlist, se estiver...
+        if (musicas.contains(musica)) {
+            throw new IllegalArgumentException(
+                    "A música \"" + musica.getNome() + "\" já está na playlist."
+            );
         }
+
+        musicas.add(musica);
     }
 
     public void removerMusica(Musica musica) {
@@ -66,8 +82,12 @@ public class Playlist {
         if (musica == null) {
             throw new IllegalArgumentException("A música não pode ser nula.");
         }
-
-        musicas.remove(musica);
+        // Verifica se a música está na playlist, se não estiver...
+        if (!musicas.remove(musica)) {
+            throw new IllegalArgumentException(
+                    "A música \"" + musica.getNome() + "\" não está na playlist."
+            );
+        }
     }
 
     // Mostra todas as musicas que a playlist contém
@@ -83,5 +103,10 @@ public class Playlist {
         System.out.println(this.nomePlaylist);
         System.out.println("Lista de músicas:");
         mostrarMusicas();
+    }
+
+    @Override
+    public String toString() {
+        return "#" + id + " - " + nomePlaylist + " (" + musicas.size() + " músicas)";
     }
 }

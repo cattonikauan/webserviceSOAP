@@ -1,0 +1,17 @@
+# Ignora tudo por padrão
+*
+
+# ...mas permite entrar nas pastas (para achar os .java dentro delas)
+!*/
+
+# Permite apenas os códigos Java
+!*.java
+
+# E alguns arquivos úteis do repositório
+!.gitignore
+!README.md
+
+# Pastas da IDE e de build (nunca enviar)
+.idea/
+.vscode/
+out/
