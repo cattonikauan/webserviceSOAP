@@ -1,9 +1,9 @@
-package calc.Service;
+package calc.service;
 
-import calc.Controller.MusicaController;
-import calc.Controller.PlaylistController;
-import calc.Model.Musica;
-import calc.Model.Playlist;
+import calc.controller.MusicaController;
+import calc.controller.PlaylistController;
+import calc.model.Musica;
+import calc.model.Playlist;
 
 import javax.jws.WebService;
 import java.util.List;
@@ -21,8 +21,9 @@ public class MusicaPlaylistServerImpl implements MusicaPlaylistServer {
 
     // ---- Música ----
 
-    public Musica cadastrarMusica(String nome, String autor, float duracao) {
-        return musicaController.cadastrar(nome, autor, duracao);
+    public int cadastrarMusica(String nome, String autor, float duracao) {
+        Musica musica = musicaController.cadastrar(nome, autor, duracao);
+        return musica.getId();
     }
 
     public Musica buscarMusica(int id) {

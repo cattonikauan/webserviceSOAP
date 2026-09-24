@@ -1,7 +1,7 @@
-package calc.Controller;
+package calc.controller;
 
-import calc.Model.Musica;
-import calc.Model.Playlist;
+import calc.model.Musica;
+import calc.model.Playlist;
 
 public class mainteste {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package calc.Service;
+package calc.service;
 
 import javax.xml.ws.Endpoint;
 

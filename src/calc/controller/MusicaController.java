@@ -1,6 +1,6 @@
-package calc.Controller;
+package calc.controller;
 
-import calc.Model.Musica;
+import calc.model.Musica;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
