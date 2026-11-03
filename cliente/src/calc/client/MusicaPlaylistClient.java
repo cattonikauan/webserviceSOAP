@@ -1,8 +1,8 @@
 package calc.client;
 
-import calc.model.Musica;
-import calc.model.Playlist;
-import calc.service.MusicaPlaylistServer;
+import calc.client.model.Musica;
+import calc.client.model.Playlist;
+import calc.client.service.MusicaPlaylistServer;
 
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
