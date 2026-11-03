@@ -7,8 +7,6 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
 
-// separar projeto, mudar musicaplaylistserver (interface),
-
 @WebService(name = "MusicaPlaylist", targetNamespace = MusicaPlaylistServer.NAMESPACE)
 public interface MusicaPlaylistServer {
 

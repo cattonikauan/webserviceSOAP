@@ -10,7 +10,7 @@ import java.util.List;
 
 // Cada método só repassa a chamada para o controller correspondente.
 // As exceções lançadas pelos models/controllers viram SOAP Fault para o cliente.
-@WebService(endpointInterface = "calc.Service.MusicaPlaylistServer",
+@WebService(endpointInterface = "calc.service.MusicaPlaylistServer",
         targetNamespace = MusicaPlaylistServer.NAMESPACE,
         serviceName = "MusicaPlaylistService",
         portName = "MusicaPlaylistPort")
